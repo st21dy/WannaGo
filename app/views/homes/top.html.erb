@@ -1,1 +1,11 @@
-<h1>TOP</h1>
+<% if current_user %>
+    <h1>TOP</h1>
+<% else %>
+    <h1>TOP</h1>
+
+    <h5>
+        <%= link_to login_path do %>
+            login
+        <% end %>
+    </h5>
+<% end %>
