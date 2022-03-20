@@ -1,0 +1,6 @@
+<% @lists.each do |list| %>
+<div>
+  <%= attachment_image_tag list, :image %>
+  <p>WannaGo：<%= list.list_name %></p>
+</div>
+<% end %>
