@@ -1,4 +1,4 @@
-<% if current_user %>
+<% if @current_user %>
     <h1>TOP</h1>
 <% else %>
     <h1>TOP</h1>
@@ -7,8 +7,15 @@
         <%= link_to login_path do %>
             login
         <% end %>
+    </h5>
+    <h5>
         <%= link_to list_index_path do %>
             list
+        <% end %>
+    </h5>
+    <h5>
+        <%= link_to sign_in_path do %>
+            signin
         <% end %>
     </h5>
 <% end %>
