@@ -1,0 +1,24 @@
+<center id="index">
+    <%= form_with model: @post_image, local:true do |f| %>
+        <h1 class="page-title">Phot Memory</h1>
+        <div class="f">
+            <%= f.attachment_field :image %>
+            <h4><%= f.submit '投稿' %></h4>
+        </div>
+    <% end %>
+</center>
+
+
+    <div>
+        <h1 class="page-title">PHOT</h1>
+            <div class="post-image">
+                <% @post_images.each do |post_image| %>
+                    <ul class="product-list">
+                        <li>
+                            <%= attachment_image_tag post_image, :image %>
+                        </li>
+                    </ul>
+                <% end %>
+            </div>
+    </div>
+

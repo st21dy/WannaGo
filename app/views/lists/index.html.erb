@@ -1,0 +1,27 @@
+<center id="index">
+    <%= form_with model: @list, local:true do |f| %>
+        <h1 class="page-title">Place Name</h1>
+        <div class="f">
+            <%= f.text_field :list_name %>
+            <h4><%= f.submit '投稿' %></h4>
+        </div>
+    <% end %>
+</center>
+
+<center id="index">
+    <div>
+        <h1 class="page-title">LIST</h1>
+            <div class="list">
+                <% @lists.each do |list| %>
+                    <div class="f">
+                        <%= check_box_tag :sample %>
+                        <p><%= list.list_name %></p>
+                        <% if list.user == @current_user %>
+                            <%= link_to "削除", list_path(list), class: "text-danger",method: :delete %>
+                        <% end %>
+                    </div>
+                <% end %>
+            </div>
+    </div>
+</center>
+
