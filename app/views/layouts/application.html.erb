@@ -9,6 +9,40 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header id="header" class="wrapper">
+      <h1 class="site-title">
+        <a>
+          <%= link_to root_path do %>WannaGo<% end %>
+        </a>
+      </h1>
+      
+      <nav id="navi">
+        <ul class="navi-nemu">
+          <li><a><%= link_to root_path do %>TOP<% end %></a></li>
+          <li><a><%= link_to lists_path do %>LIST<% end %></a></li>
+          <li><a><%= link_to post_images_path do %>PHOT<% end %></a></li>
+        </ul>
+      </nav>
+      
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="mask"></div>
+    </header>
+    
+    <main id="main" class="wrapper">
+      <%= yield %>
+    </main>
+    
+    <footer id="footer" class="wrapper">
+      <ul class="menu">
+        <li><a href="https://www.instagram.com/" target="_blank">INSTAGRAM</a></li>
+        <li><a href="https://twitter.com/" target="_blank">TWITTER</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank">FACEBOOK</a></li>
+      </ul>
+      <p class="copyright">&copy; WannaGo</p>
+    </footer>
   </body>
 </html>

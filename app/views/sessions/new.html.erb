@@ -10,4 +10,17 @@
             top
         <% end %>
     </h5>
+    <%= form_for :session, url: login_path do |f| %>
+        <div class="field">
+            <%= f.label :メールアドレス %><br />
+            <%= f.email_field :email %>
+        </div>
+        <div class="field">
+            <%= f.label :パスワード %>
+            <%= f.password_field :password %>
+        </div>
+        <div class="m-2">
+            <%= f.submit "LOGIN" %>
+        </div>
+    <% end %>
 <% end %>

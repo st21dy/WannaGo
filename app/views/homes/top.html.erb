@@ -1,16 +1,16 @@
 <% if @current_user %>
-    <h1>TOP</h1>
+    <div class="content wrapper">
+        <h1 class="title">Where do you want to go?</h1>
+    </div>
+    
 <% else %>
-    <h1>TOP</h1>
+    <div class="content wrapper">
+        <h1 class="title">Where do you want to go?</h1>
+    </div>
 
     <h5>
         <%= link_to login_path do %>
             login
-        <% end %>
-    </h5>
-    <h5>
-        <%= link_to list_index_path do %>
-            list
         <% end %>
     </h5>
     <h5>
